@@ -1,0 +1,2 @@
+# Jot
+Lightweight Self-Organization 
