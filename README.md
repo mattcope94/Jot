@@ -1,2 +1,2 @@
 # Jot
-Lightweight Self-Organization 
+Lightweight Self-Organization Utility
