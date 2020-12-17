@@ -12,3 +12,7 @@ type Query {
     description: String!
     url: String!
   }
+
+  type Note {
+      
+  }

@@ -4,8 +4,9 @@ const prisma = new PrismaClient()
 
 async function main() {
     
-    const notes = prisma.note.findMany()
+    const notes = await prisma.note.findMany()
     console.log(notes)
+    
   }
 
 main()
