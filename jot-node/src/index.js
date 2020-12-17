@@ -1,14 +1,5 @@
 const { ApolloServer } = require('apollo-server');
-
-
-
-let links = [{
-    id: 'link-0',
-    url: 'www.jot.com',
-    description: 'Tasks Reimagined '
-  }]
-
-let idCount = links.length
+const { PrismaClient } = require('@prisma/client');
 
 const resolvers = {
   Query: {
@@ -33,6 +24,8 @@ Mutation: {
 
 const fs = require('fs');
 const path = require('path');
+const prisma = new PrismaClient()
+
 
 const server = new ApolloServer({
   typeDefs: fs.readFileSync(
@@ -40,6 +33,9 @@ const server = new ApolloServer({
     'utf8'
   ),
   resolvers,
+  context: {
+    prisma,
+  }
 })
 
 server
