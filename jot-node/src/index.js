@@ -10,7 +10,7 @@ const resolvers = {
 
 Mutation: {
  
-  post: (parent, args, context, info) => {
+  post: (parent, args, context) => {
     const newNote = context.prisma.note.create({
         data: {
           body: args.body,
@@ -18,11 +18,8 @@ Mutation: {
         },
       })
       return newNote
-    }
-    
-  }
-    
-  }
+    } 
+  }},
 }
 
 const fs = require('fs');
