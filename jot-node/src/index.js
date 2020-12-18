@@ -4,19 +4,22 @@ const { PrismaClient } = require('@prisma/client');
 const resolvers = {
   Query: {
     info: () => `This is the jot API`,
-    feed: () => links,
+    feed: async (parent, args, context) => {
+        return context.prisma.note.findMany()
 },
 
 Mutation: {
-  // 2
-  post: (parent, args) => {
-     const link = {
-      id: `link-${idCount++}`,
-      description: args.description,
-      url: args.url,
+ 
+  post: (parent, args, context, info) => {
+    const newNote = context.prisma.note.create({
+        data: {
+          body: args.body,
+          tag: args.tag,
+        },
+      })
+      return newNote
     }
-    links.push(link)
-    return link
+    
   }
     
   }
