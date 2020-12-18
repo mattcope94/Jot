@@ -6,20 +6,19 @@ const resolvers = {
     info: () => `This is the jot API`,
     feed: async (parent, args, context) => {
         return context.prisma.note.findMany()
-},
-
-Mutation: {
- 
-  post: (parent, args, context) => {
-    const newNote = context.prisma.note.create({
-        data: {
-          body: args.body,
-          tag: args.tag,
-        },
-      })
-      return newNote
-    } 
-  }},
+      },
+    },
+    Mutation: {
+      post: (parent, args, context, info) => {
+        const newNote = context.prisma.note.create({
+          data: {
+            body: args.body,
+            tag: args.tag,
+          },
+        })
+        return newNote
+      },
+    }
 }
 
 const fs = require('fs');
