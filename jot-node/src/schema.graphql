@@ -17,5 +17,8 @@ type Query {
       id: ID!
       body: String!
       tag: String!
+  }
 
+  type Subscription {
+      newNote: Note
   }
