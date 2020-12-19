@@ -10,6 +10,15 @@ const resolvers = {
     feed: async (parent, args, context) => {
         return context.prisma.note.findMany()
       },
+      // Get note by id
+      get: (args, context) => {
+        const Note = context.prisma.note.findUnique({
+            where:{
+                  id:args.id
+            }
+        })
+        return Note
+    }
     },
     Mutation: {
       post: (parent, args, context, info) => {
@@ -21,6 +30,7 @@ const resolvers = {
         })
         return newNote
       },
+      
     }
 }
 
