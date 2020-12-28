@@ -13,6 +13,7 @@
   }
 }
 
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -24,6 +25,11 @@
   color: white;
 }
 
+.App {
+  background-color: #282c34;
+  display: flex;
+}
+html {background-color:  #282c34}
 .App-link {
   color: #61dafb;
 }

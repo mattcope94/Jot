@@ -1,17 +1,17 @@
+import Navigation from './components/Navbar';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container } from 'react-bootstrap';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        
-        
-        <p>
-          Testing Jot
-        </p>
-       
-      </header>
+      <Container>
+        <Navigation />
+      </Container>
+      <body></body>
     </div>
+    
   );
 }
 

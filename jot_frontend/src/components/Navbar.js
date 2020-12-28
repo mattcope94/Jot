@@ -10,15 +10,15 @@ import {
 
 const Navigation = () => {
     return (
-        <Navbar bg="primary" variant="dark" expand="md">
-          <Navbar.Brand href="#home">Movies-App</Navbar.Brand>
+        <Navbar bg="warning" variant="dark" expand="md">
+          <Navbar.Brand href="#home">Jot</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
               
               
-              <Nav.Link href="#link">Link</Nav.Link>
-              <NavDropdown title="Sample Dropdown" id="basic-nav-dropdown">
+              <Nav.Link href="#link">Notes</Nav.Link>
+              <NavDropdown title="Account" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
                   Another action
@@ -32,7 +32,7 @@ const Navigation = () => {
             </Nav>
             <Form inline>
               <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-              <Button variant="outline-light">Search</Button>
+              <Button variant="outline-dark">Search</Button>
             </Form>
           </Navbar.Collapse>
         </Navbar>
