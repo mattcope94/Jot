@@ -10,7 +10,7 @@ import {
 
 const Navigation = () => {
     return (
-        <Navbar bg="warning" variant="dark" expand="md">
+        <Navbar  variant="dark" expand="md">
           <Navbar.Brand href="#home">Jot</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
@@ -32,7 +32,7 @@ const Navigation = () => {
             </Nav>
             <Form inline>
               <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-              <Button variant="outline-dark">Search</Button>
+              <Button variant="outline-light">Search</Button>
             </Form>
           </Navbar.Collapse>
         </Navbar>
