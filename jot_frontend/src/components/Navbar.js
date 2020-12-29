@@ -11,14 +11,16 @@ import {
 const Navigation = () => {
     return (
         <Navbar  variant="dark" expand="md">
-          <Navbar.Brand href="#home">Jot</Navbar.Brand>
+          <Navbar.Brand href="Home">Jot</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
               
               
-              <Nav.Link href="#link">Notes</Nav.Link>
-              <NavDropdown title="Account" id="basic-nav-dropdown">
+              <Nav.Link href="Notes">Notes</Nav.Link>
+              <Nav.Link href="About">About</Nav.Link>
+
+              <NavDropdown title="Settings" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
                   Another action
